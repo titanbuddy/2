@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "CafeFont";
-  src: url("/fonts/PopularCafeNF.ttf") format("truetype"), url("/fonts/PopularCafeNF.otf") format("opentype"), url("/fonts/Negaroa-Regular.ttf") format("truetype");
+  src: url("fonts/PopularCafeNF.ttf") format("truetype"), url("fonts/PopularCafeNF.otf") format("opentype"), url("fonts/Negaroa-Regular.ttf") format("truetype");
 }
 
 * {
@@ -197,11 +198,12 @@ nav .menu-actions .mid-line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 800px;
+  width: 1200px;
 }
 
 .loving1 h1 {
-  font-size: 7rem;
+  text-transform: uppercase;
+  font-size: 9rem;
 }
 
 .service-section {
@@ -211,6 +213,7 @@ nav .menu-actions .mid-line {
   background-repeat: repeat-x;
   padding: 1rem 0;
   margin-block: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .service-text {
@@ -223,6 +226,8 @@ nav .menu-actions .mid-line {
 .service-text .serv-title {
   line-height: 60%;
   font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 .service-text .service-head {
@@ -260,6 +265,13 @@ nav .menu-actions .mid-line {
 .services {
   max-width: 1100px;
   margin-block: 4rem;
+}
+
+.services a {
+  text-decoration: none;
+  padding: 0.4rem 1.3rem;
+  background: #ffb710;
+  color: #fff;
 }
 
 .services .service-grid {
@@ -347,6 +359,23 @@ nav .menu-actions .mid-line {
   background: white;
 }
 
+.services .service-grid .col2 .col2-col1 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 0.5rem;
+}
+
 .services .service-grid .col2 .col2-col1 img {
   height: 180px;
   border-radius: 200px 14px 14px 200px;
@@ -365,6 +394,23 @@ nav .menu-actions .mid-line {
       -ms-flex-align: center;
           align-items: center;
   background: white;
+  gap: 0.5rem;
+}
+
+.services .service-grid .col2 .col2-col2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 0.5rem;
 }
 
@@ -425,6 +471,23 @@ nav .menu-actions .mid-line {
      object-fit: cover;
 }
 
+.services .service-second-grid .serv-sec-2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 0.5rem;
+}
+
 .exclusive-section {
   padding: 2rem 0;
   margin-block: 4rem;
@@ -434,12 +497,12 @@ nav .menu-actions .mid-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   gap: 1rem;
 }
 
@@ -451,10 +514,12 @@ nav .menu-actions .mid-line {
 
 .exclusive-grid h2 {
   font-size: 4rem;
+  line-height: 90%;
 }
 
 .exclusive-grid .exclusive-grid-p {
   text-align: end;
+  font-family: "Montserrat", sans-serif;
 }
 
 .exclusive-img {
@@ -524,6 +589,33 @@ nav .menu-actions .mid-line {
   rotate: 14deg;
 }
 
+.burger .inside-arrow-3 {
+  position: absolute;
+  top: 38%;
+  left: 60%;
+  rotate: -5deg;
+}
+
+.burger .inside-arrow-4 {
+  position: absolute;
+  top: 55%;
+  left: 60%;
+  rotate: -37deg;
+}
+
+.burger .inside-arrow-5 {
+  position: absolute;
+  top: 38%;
+  right: 60%;
+  rotate: 150deg;
+}
+
+.burger .inside-arrow-6 {
+  position: absolute;
+  top: 60%;
+  right: 63%;
+}
+
 .burger .bun {
   max-width: 200px;
   position: absolute;
@@ -554,7 +646,7 @@ nav .menu-actions .mid-line {
 .burger .lettuce {
   max-width: 200px;
   position: absolute;
-  top: 25%;
+  top: 22%;
   left: 2%;
   text-align: center;
 }
@@ -627,13 +719,34 @@ nav .menu-actions .mid-line {
   color: #fff;
 }
 
+.loving-black .loving {
+  width: 600px;
+}
+
 .loving-black .loving1 {
-  -webkit-animation: move 6s linear infinite;
-          animation: move 6s linear infinite;
+  -webkit-animation: move 17s linear infinite;
+          animation: move 17s linear infinite;
+}
+
+.loving-black .loving1 h1 {
+  font-size: 4rem;
+}
+
+.loving-rev .loving {
+  width: 600px;
 }
 
 .loving-rev .loving1 {
-  animation: move 6s linear infinite reverse;
+  animation: move 13s linear infinite reverse;
+}
+
+.loving-rev .loving1 h1 {
+  font-size: 4rem;
+}
+
+.loving-sec-3 .loving1 {
+  -webkit-animation: move 15s linear infinite;
+          animation: move 15s linear infinite;
 }
 
 .footer {
@@ -780,8 +893,7 @@ nav .menu-actions .mid-line {
   .exclusive-grid .exclusive-grid-p {
     text-align: start;
   }
-  .burger .inside-arrow-1,
-  .burger .inside-arrow-2 {
+  .burger .arrow {
     display: none;
   }
   .services .service-second-grid {

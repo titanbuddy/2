@@ -21,7 +21,7 @@ let tl = gsap.timeline({
 
 tl.to(".page", {
   height: "0",
-  duration: 0.9,
+  duration: 0.7,
   stagger: 0.35,
   onComplete: () =>
     document.querySelector("body").classList.remove("is-loading"),
@@ -32,7 +32,7 @@ tl.from(
     opacity: 0,
     x: 100,
   },
-  "-=0.5"
+  "-=0.2"
 );
 tl.from(
   ".menu-actions",
@@ -40,7 +40,7 @@ tl.from(
     x: -100,
     opacity: 0,
   },
-  "-=0.5"
+  "-=0.2"
 );
 tl.to(
   ".hero-text h2",
