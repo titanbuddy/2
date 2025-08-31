@@ -22,7 +22,7 @@ let tl = gsap.timeline({
 tl.to(".page", {
   height: "0",
   duration: 0.7,
-  stagger: 0.35,
+  stagger: 0.25,
   onComplete: () =>
     document.querySelector("body").classList.remove("is-loading"),
 });
@@ -32,7 +32,7 @@ tl.from(
     opacity: 0,
     x: 100,
   },
-  "-=0.2"
+  "-=0.7"
 );
 tl.from(
   ".menu-actions",
@@ -40,7 +40,7 @@ tl.from(
     x: -100,
     opacity: 0,
   },
-  "-=0.2"
+  "-=0.7"
 );
 tl.to(
   ".hero-text h2",
@@ -49,11 +49,15 @@ tl.to(
   },
   "-=0.5"
 );
-tl.from(".hero-img img", {
-  y: "150%",
-  opacity: 0,
-  duration: 1.2,
-});
+tl.from(
+  ".hero-img img",
+  {
+    y: "150%",
+    opacity: 0,
+    duration: 1.2,
+  },
+  "-=1"
+);
 gsap.to(".loving1", {
   scrollTrigger: {
     trigger: ".navbar",
