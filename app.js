@@ -3,6 +3,8 @@ const lenis = new Lenis({
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 });
 
+// Animate it
+
 function raf(time) {
   lenis.raf(time);
   ScrollTrigger.update();
@@ -15,49 +17,52 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 gsap.registerPlugin(ScrollTrigger);
-let tl = gsap.timeline({
-  delay: 1,
-});
+let tl = gsap.timeline({});
 
 tl.to(".page", {
   height: "0",
-  duration: 0.7,
+  duration: 1.2,
   stagger: 0.25,
-  onComplete: () =>
-    document.querySelector("body").classList.remove("is-loading"),
 });
-tl.from(
-  ".logo",
-  {
-    opacity: 0,
-    x: 100,
-  },
-  "-=0.7"
-);
-tl.from(
-  ".menu-actions",
-  {
-    x: -100,
-    opacity: 0,
-  },
-  "-=0.7"
-);
 tl.to(
   ".hero-text h2",
   {
     y: 0,
-  },
-  "-=0.5"
-);
-tl.from(
-  ".hero-img img",
-  {
-    y: "150%",
-    opacity: 0,
-    duration: 1.2,
+    opacity: 1,
+    duration: 1.4,
   },
   "-=1"
 );
+tl.from(
+  ".logo",
+  {
+    opacity: 0,
+    y: -100,
+    duration: 1.3,
+  },
+  "one"
+);
+tl.from(
+  ".menu-actions",
+  {
+    y: -100,
+    duration: 1.3,
+    opacity: 0,
+  },
+  "one"
+);
+
+tl.to(
+  ".hero-img .overlay",
+  {
+    width: "0%",
+    duration: 1.2,
+  },
+  "-=0.8"
+);
+tl.from(".loving1", {
+  opacity: 0,
+});
 gsap.to(".loving1", {
   scrollTrigger: {
     trigger: ".navbar",

@@ -1,7 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "CafeFont";
-  src: url("fonts/PopularCafeNF.ttf") format("truetype"), url("fonts/PopularCafeNF.otf") format("opentype"), url("fonts/Negaroa-Regular.ttf") format("truetype");
+  src: url("../fonts/PopularCafeNF.ttf") format("truetype"), url("../fonts/PopularCafeNF.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "dongpora";
+  src: url("../fonts/dongporademo-naxjy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "negaroa";
+  src: url("../fonts/Negaroa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "costarica";
+  src: url("../fonts/costaricapersonaluseonly-5yajb.otf") format("opentype");
 }
 
 * {
@@ -16,8 +31,8 @@ body {
   overflow-x: hidden;
 }
 
-.is-loading {
-  overflow-y: hidden;
+::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -146,8 +161,9 @@ nav .menu-actions .mid-line {
 }
 
 .hero .hero-text h2 {
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
   letter-spacing: 2px;
   line-height: 90%;
   font-weight: 400;
@@ -156,23 +172,32 @@ nav .menu-actions .mid-line {
 
 .hero .hero-text h2 span {
   color: #ffb710;
-  font-weight: 300;
   font-family: "negaroa";
   letter-spacing: -3px;
 }
 
 .hero .hero-img {
-  overflow: hidden;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .hero-img .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 2;
 }
 
 .hero .hero-img img {
-  border-radius: 2rem;
   width: 100%;
-  height: 500px;
+  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
-  background-position: center;
+  border-radius: 15px;
 }
 
 .loving-div {
@@ -198,12 +223,13 @@ nav .menu-actions .mid-line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1200px;
+  width: 700px;
 }
 
 .loving1 h1 {
   text-transform: uppercase;
   font-size: 9rem;
+  font-family: "dongpora";
 }
 
 .service-section {
@@ -213,7 +239,6 @@ nav .menu-actions .mid-line {
   background-repeat: repeat-x;
   padding: 1rem 0;
   margin-block: 2rem;
-  font-family: "Montserrat", sans-serif;
 }
 
 .service-text {
@@ -226,27 +251,28 @@ nav .menu-actions .mid-line {
 .service-text .serv-title {
   line-height: 60%;
   font-size: 4rem;
-  font-family: "Montserrat", sans-serif;
   font-weight: 800;
+  font-family: "costarica", sans-serif;
 }
 
 .service-text .service-head {
   position: relative;
-  font: 68px "negaroa";
+  font-size: 68px;
   color: #ffb710;
+  font-weight: 900;
 }
 
 .service-text .service-head .servl {
   top: 0px;
   left: 0px;
   position: absolute;
-  width: 90px;
+  width: 100px;
 }
 
 .service-text .service-head .serv2 {
   top: 0px;
   right: 0px;
-  width: 90px;
+  width: 100px;
   position: absolute;
 }
 
@@ -720,7 +746,7 @@ nav .menu-actions .mid-line {
 }
 
 .loving-black .loving {
-  width: 600px;
+  width: 400px;
 }
 
 .loving-black .loving1 {
@@ -733,7 +759,7 @@ nav .menu-actions .mid-line {
 }
 
 .loving-rev .loving {
-  width: 600px;
+  width: 400px;
 }
 
 .loving-rev .loving1 {
@@ -880,6 +906,12 @@ nav .menu-actions .mid-line {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .service-text .servl {
+    display: none;
+  }
+  .service-text .serv2 {
+    display: none;
   }
   .exclusive-grid {
     -webkit-box-orient: vertical;
