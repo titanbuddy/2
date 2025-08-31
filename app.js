@@ -21,7 +21,7 @@ let tl = gsap.timeline({});
 
 tl.to(".page", {
   height: "0",
-  duration: 1.2,
+  duration: 0.9,
   stagger: 0.25,
 });
 tl.to(
