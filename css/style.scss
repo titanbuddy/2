@@ -466,11 +466,10 @@ nav {
       border-radius: 100px;
     }
     h3 {
-      font-size: 2rem;
       font-style: italic;
     }
     img {
-      width: 80px;
+      width: 100px;
       position: absolute;
       bottom: -30px;
       right: 10px;
@@ -586,6 +585,7 @@ nav {
       }
       .subs-input {
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         input {
           padding: 0.8rem 2rem;
@@ -626,6 +626,34 @@ nav {
         a {
           color: #fff;
         }
+      }
+    }
+  }
+}
+@media screen and(max-width: 500px) {
+  .burger {
+    .bun {
+      max-width: 30vw;
+      h3 {
+        font-size: 6vw;
+      }
+      p {
+        font-size: 3vw;
+      }
+      img {
+        max-width: 15vw;
+      }
+    }
+    .lettuce {
+      max-width: 30vw;
+      h3 {
+        font-size: 6vw;
+      }
+      p {
+        font-size: 3vw;
+      }
+      img {
+        max-width: 15vw;
       }
     }
   }

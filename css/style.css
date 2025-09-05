@@ -658,12 +658,11 @@ nav .menu-actions .mid-line {
 }
 
 .burger .bun h3 {
-  font-size: 2rem;
   font-style: italic;
 }
 
 .burger .bun img {
-  width: 80px;
+  width: 100px;
   position: absolute;
   bottom: -30px;
   right: 10px;
@@ -819,6 +818,8 @@ nav .menu-actions .mid-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -879,6 +880,33 @@ nav .menu-actions .mid-line {
 
 .footer .copyrights .cop-text .cop-text-actions a {
   color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .burger .bun {
+    max-width: 30vw;
+  }
+  .burger .bun h3 {
+    font-size: 6vw;
+  }
+  .burger .bun p {
+    font-size: 3vw;
+  }
+  .burger .bun img {
+    max-width: 15vw;
+  }
+  .burger .lettuce {
+    max-width: 30vw;
+  }
+  .burger .lettuce h3 {
+    font-size: 6vw;
+  }
+  .burger .lettuce p {
+    font-size: 3vw;
+  }
+  .burger .lettuce img {
+    max-width: 15vw;
+  }
 }
 
 @media screen and (max-width: 968px) {
